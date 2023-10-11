@@ -1,0 +1,340 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  width: 100%;
+  font-family: "inter";
+  background-color: hsl(230, 17%, 14%);
+  max-width: 1440px;
+  height: 100vh;
+  padding: 0 8em;
+  margin: 0 auto;
+  display: grid;
+  font-size: 14px;
+  height: 100vh;
+  color: #fff;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+header {
+  padding: 19px 0;
+  width: 100%;
+}
+
+.attribution {
+  text-align: center;
+}
+
+/* header*/
+
+.header_container {
+  display: flex;
+}
+.text_right {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-left: 36rem;
+}
+
+.text_left,
+h1 {
+  color: #fff;
+  font-size: 30px;
+}
+.text_left,
+.total_text {
+  color: hsl(228, 12%, 44%);
+  font-size: 14px;
+  font-weight: 700;
+}
+.textmode {
+  color: hsl(228, 12%, 44%);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 53px;
+  height: 25px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsl(210, 78%, 56%);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.gwapo {
+  background-color: #fff;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 21px;
+  left: 4px;
+  bottom: 4px;
+  background-color: hsl(228, 28%, 20%);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: hsl(230, 22%, 74%);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #fff;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* button facebook*/
+button {
+  cursor: pointer;
+}
+button:hover {
+  color: rgb(90, 69, 69);
+  transition: 0.72 ease;
+}
+
+.grid {
+  display: grid;
+}
+
+.gap-5 {
+  gap: 1.25rem;
+}
+
+.grid_auto_fit {
+  display: flex;
+  align-items: center;
+  margin-top: -14px;
+}
+span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  margin-left: -14px;
+}
+
+.relative_rounded {
+  width: 16rem;
+  height: 12rem;
+  border: none;
+  border-top: 6px solid hsl(228, 80%, 60%);
+  background-color: hsl(228, 28%, 20%);
+  margin-top: 0px;
+  border-radius: 5px;
+  align-items: center;
+}
+.relative_rounded img {
+  width: 20px;
+  height: 20px;
+  align-items: center;
+  margin-top: 2px;
+  margin-left: 20px;
+}
+
+.relative_rounded .img-gamay {
+  height: 10px;
+  width: 10px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.name {
+  color: hsl(228, 12%, 44%);
+  font-size: 10px;
+  font-weight: 700;
+  margin-left: 3px;
+}
+.no_text {
+  font-size: 45px;
+  color: #fff;
+  font-weight: 700;
+}
+.followers {
+  color: hsl(228, 12%, 44%);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-top: -3px;
+}
+
+.date {
+  color: hsl(163, 72%, 41%);
+  font-size: 10px;
+  margin-top: 10px;
+}
+
+.absolute_rounded {
+  width: 16rem;
+  height: 12rem;
+  border: none;
+  border-top: 6px solid hsl(329, 70%, 58%);
+  background-color: hsl(228, 28%, 20%);
+  margin-top: 0px;
+  border-radius: 5px;
+  align-items: center;
+}
+.absolute_rounded .img-gamay {
+  height: 10px;
+  width: 10px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.position_rounded {
+  width: 16rem;
+  height: 12rem;
+  border: none;
+  border-top: 6px solid hsl(348, 97%, 39%);
+  background-color: hsl(228, 28%, 20%);
+  margin-top: 0px;
+  border-radius: 5px;
+  align-items: center;
+}
+.position_rounded .img-gamay {
+  height: 10px;
+  width: 10px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.position_rounded .date {
+  color: hsl(348, 97%, 39%);
+}
+/* end button facebook*/
+
+/* main button */
+
+.gap-5 {
+  gap: 1.25rem;
+}
+
+.grid-center4boxes {
+  display: flex;
+  align-items: center;
+  margin-top: -14px;
+}
+
+.boxrelative-rounded {
+  width: 16rem;
+  height: 8rem;
+  border: none;
+  background-color: hsl(228, 28%, 20%);
+  margin-top: 0px;
+  border-radius: 5px;
+}
+
+.page-view {
+  color: hsl(228, 12%, 44%);
+  margin-right: 8rem;
+}
+.page-like {
+  color: hsl(228, 12%, 44%);
+  margin-right: 11rem;
+}
+.fb_icon {
+  margin-top: -22px;
+  margin-left: 10rem;
+}
+.no_87 {
+  font-size: 2em;
+  color: #fff;
+  font-weight: 600;
+  margin-right: 10rem;
+  margin-top: 25px;
+}
+
+.up_icon {
+  margin-left: 10rem;
+  margin-top: -36px;
+}
+.percent {
+  margin-top: -36px;
+  color: hsl(163, 72%, 41%);
+}
+.percent1 {
+  margin-top: -36px;
+  color: hsl(356, 69%, 56%);
+}
+
+.grid-center4boxes {
+  margin-top: 12px;
+}
+
+/* main button */
